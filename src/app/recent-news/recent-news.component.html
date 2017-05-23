@@ -1,3 +1,17 @@
-<p>
-  recent-news works!
-</p>
+
+<div *ngFor="let news of latest_news.articles" class="col s12 m7">
+<div class="card horizontal">
+  <div class="card-image">
+    <img src="{{news.urlToImage}}">
+  </div>
+  <div class="card-stacked">
+    <div class="card-content">
+      <h5 class="header">{{news.title}}</h5>
+      <p>{{news.description}}</p>
+    </div>
+    <div class="card-action">
+      <a href="{{news.url}}">Read More</a>
+    </div>
+  </div>
+</div>
+</div>

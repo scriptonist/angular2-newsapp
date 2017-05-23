@@ -1,18 +1,23 @@
 
-<nav class="nav-extended">
+<nav class="nav-extended green darken-1">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Top News</a>
+      <a href="#" class="brand-logo hoverable"> <i class="material-icons">library_books</i> Top News</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-         <li><a href="https://newsapi.org/">powered by newsapi.org</a></li>
+         <li><a href="https://newsapi.org/">Powered by newsapi.org</a></li>
       </ul>
       
     </div>
     <div class="nav-content">
       <ul class="tabs tabs-transparent">
-        <li class="tab"><a class="active"  href="#test1">TechCruch</a></li>
-        <li class="tab"><a href="#test2">Wired</a></li>
-        <li class="tab"><a href="#test3">The verge</a></li>
-        <li class="tab"><a href="#test4">Hacker News</a></li>
+        <li class="tab"><a class="active"  routerLink="/techcrunch">TechCrunch</a></li>
+        <li class="tab"><a href="#test2" routerLink="/bbc-news">BBC News</a></li>
+        <li class="tab"><a href="#test2" routerLink="/bloomberg">Bloomberg</a></li>
+        <li class="tab"><a href="#test2" routerLink="/reddit-r-all">reddit/r/all</a></li>
+        <li class="tab"><a href="#test2" routerLink="/the-wall-street-journal">Wallstreet Journal</a></li>
+        <li class="tab"><a href="#test2" routerLink="/the-hindu">The Hindu</a></li>
+
+        <li class="tab"><a href="#test3"routerLink="/the-verge" >The verge</a></li>
+        <li class="tab"><a href="#test4"routerLink="/hacker-news" >Hacker News</a></li>
       </ul>
     </div>
   </nav>
@@ -20,23 +25,8 @@
 
 <!--Navbar end       -->
 <div class="container">
-
-<div *ngFor="let news of latest_news.articles" class="col s12 m7">
-<div class="card horizontal">
-  <div class="card-image">
-    <img src="{{news.urlToImage}}">
-  </div>
-  <div class="card-stacked">
-    <div class="card-content">
-      <h5 class="header">{{news.title}}</h5>
-      <p>{{news.description}}</p>
-    </div>
-    <div class="card-action">
-      <a href="{{news.url}}">Read More</a>
-    </div>
-  </div>
-</div>
-</div>
+  <router-outlet></router-outlet>
+  <!--<recent-news></recent-news>-->
 
 </div>
             
