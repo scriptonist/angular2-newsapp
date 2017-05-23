@@ -1,6 +1,7 @@
 # WeatherApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.4.
+replace the api key with your api key  for newsapi.org in the file ` news-techcrunch.service.ts`
 
 ## Development server
 
