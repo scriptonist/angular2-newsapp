@@ -4,17 +4,21 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { NewsTechcrunchService } from './news-techcrunch.service';
+import { RecentNewsComponent } from './recent-news/recent-news.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RecentNewsComponent,
+    
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [NewsTechcrunchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
