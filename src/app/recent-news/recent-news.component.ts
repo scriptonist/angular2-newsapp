@@ -16,14 +16,15 @@ constructor(
   private techcrunch:NewsTechcrunchService,
   private route:ActivatedRoute,
   private location:Location
+  
   ){}
-  latest_news = {};
+  latest_news = Object();
   loadNews(){
     
     this.route.params
     .switchMap((params: Params) => this.techcrunch.getTechcrunchNews(params['publication']))
     .subscribe(data => this.latest_news = data);
-    // this.techcrunch.getTechcrunchNews('wired-de').subscribe(data => this.latest_news = data)
+    
   }
   goBack(): void {
     this.location.back();

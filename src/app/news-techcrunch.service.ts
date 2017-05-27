@@ -13,7 +13,7 @@ export class NewsTechcrunchService {
 
   getTechcrunchNews(publication:string){
     
-    return this.http.get('https://newsapi.org/v1/articles?source='+publication+'&sortBy=top&apiKey=266809769f7746bd8129a950adf53046')
+    return this.http.get('https://newsapi.org/v1/articles?source='+publication+'&sortBy=top&apiKey=2c6d959664414eea8838182506044b22')
     .map((res:Response)=>res.json())
 
   }
